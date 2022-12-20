@@ -1,0 +1,79 @@
+2016-06-19  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* tag: v0.4.0
+	* deps: convert code to use C++11
+	* deps: drop libswscale and GLib dependencies
+	* core: include copy of VDPAU headers
+	* core: drop own tracing code in favor of libvdpau's
+	* core: fix VLC video scaling
+
+2016-03-19  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* license: change to the MIT license
+
+2016-03-02  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* tag v0.3.6
+	* core: handle Constrained Baseline profile for H.264
+	* misc: bugfixes
+
+2016-02-21  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* tag: v0.3.5
+	* misc: bugfixes
+	* misc: compatibility with some other ffmpeg versions
+
+2014-01-19  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* tag: v0.3.0
+	* core: avoid NULL dereference on proprietary drivers
+	* core: minor refactoring
+
+2014-01-13  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* core: mitigate memleaks on glx contexts by using own
+	vaCopySurfaceGLX implementation
+
+2014-01-11  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* doc: add known-issues.md
+	* core: use glsl shaders for colorspace conversion and texture
+	components reordering
+	* core: split large source code file into smaller pieces relevant
+	to various parts of API
+	* tests: use static linking with core code. `make check` now
+	checks current source, not current VDPAU driver.
+	* core: render to pixmap with bitblitting afterwards
+	* core: mitigate GLX context leaks from per thread context pool
+	* core: fix some concurrency bugs
+
+2013-11-15  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* tag: v0.2.1
+	* core: fix some NULL dereferences, memcpy warning, deadlock in
+	presentation thread
+	* core: implement rotation and coloring in surface rendering functions
+	* core: reuse render_target entries (VdpDecoder)
+
+2013-09-21  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* core: start splitting vdpau-soft.c into smaller pieces
+	* core: use separate thread for presentation queue
+	* core: drop global locking, try to use fine grained locking instead
+
+2013-07-06  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* tag: v0.1.0
+	* core: remove miscellaneous unused code
+	* core: add basic documentation on structures
+	* core: fix build system to simplify further packaging
+	* core: enable compiling against new libva 1.2.1 release
+
+2013-05-14  Rinat Ibragimov  <ibragimovrinat@mail.ru>
+
+	* libvdpau-va-gl use common GL context pool across several vdp
+	devices. Shrinks memory overhead from ~100% to ~50%
+
+	* libvdpau-va-gl add new quirk named AvoidVA, which disables using
+	VA-API even on systems that have it
+	* libvdpau-va-gl start writing changes to ChangeLog

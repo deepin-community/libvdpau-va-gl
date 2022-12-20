@@ -1,0 +1,94 @@
+libvdpau-va-gl (0.4.2-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 14 Nov 2022 17:46:52 +0800
+
+libvdpau-va-gl (0.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/patches: drop all patches, applied upstream.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 07 Oct 2016 10:56:46 +0200
+
+libvdpau-va-gl (0.4.0-2) unstable; urgency=medium
+
+  * Add upstream patch to fix a memory leak. Closes: #820822.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 08 Jul 2016 08:17:10 +0200
+
+libvdpau-va-gl (0.4.0-1) unstable; urgency=medium
+
+  * New upstream version.
+     + Fix fullscreen problem with VLC. Closes: #819453.
+  * Bump Standards-Version.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 25 Jun 2016 15:59:16 +0200
+
+libvdpau-va-gl (0.3.6-1) unstable; urgency=medium
+
+  * New upstream version.
+     + Remove all patches, applied upstream.
+  * Bump Standards-Version.
+  * Update Vcs-* fields in d/control.
+
+ -- Vincent Bernat <bernat@debian.org>  Wed, 02 Mar 2016 19:51:57 +0100
+
+libvdpau-va-gl (0.3.4-3) unstable; urgency=medium
+
+  * Don't pollute stdout. Closes: #780228.
+     + debian/patches/43.patch
+  * Bump Standards-Version.
+  * Use an unique License block in debian/copyright.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 31 Jul 2015 09:49:12 +0200
+
+libvdpau-va-gl (0.3.4-2) unstable; urgency=medium
+
+  * Add Depends/Enhances: libvdpau1 and Provides: vdpau-driver to match
+    other driver packages. Closes: #765975.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 19 Oct 2014 21:26:42 +0200
+
+libvdpau-va-gl (0.3.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add an horible hack to not use dpkg-architecture.
+    Closes: #737371.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 02 Feb 2014 14:26:21 +0100
+
+libvdpau-va-gl (0.2.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * Bump Standards-Version.
+  * Ensure we compile with -DNDEBUG as this displays many verbose messages.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 21 Dec 2013 17:50:56 +0100
+
+libvdpau-va-gl (0.2.0-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 01 Nov 2013 10:04:40 +0100
+
+libvdpau-va-gl (0.1.0-2) unstable; urgency=low
+
+  * Add multiarch support. Closes: #719617.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 13 Aug 2013 18:30:07 +0200
+
+libvdpau-va-gl (0.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+      + Switch to versioned tarballs as source.
+  * Add a debian/watch file.
+  * Depends on debhelper 8.1.3 to use compatibility level 9.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 09 Aug 2013 08:29:45 +0200
+
+libvdpau-va-gl (0+git20130616.b36186e2b3-1) unstable; urgency=low
+
+  * Initial release. Closes: #712035.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 16 Jun 2013 08:19:46 +0200

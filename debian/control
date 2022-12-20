@@ -1,0 +1,30 @@
+Source: libvdpau-va-gl
+Section: libs
+Priority: optional
+Maintainer: Vincent Bernat <bernat@debian.org>
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9), git, cmake,
+               libvdpau-dev, libva-dev,
+               libglib2.0-dev,
+               libswscale-dev, libgl1-mesa-dev, libglu1-mesa-dev
+Homepage: https://github.com/i-rinat/libvdpau-va-gl
+Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/libvdpau-va-gl.git
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/libvdpau-gl-va.git
+
+Package: libvdpau-va-gl1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libvdpau1
+Enhances: libvdpau1
+Provides: vdpau-driver
+Description: VDPAU driver with OpenGL/VAAPI backend
+ Many applications can use VDPAU to accelerate portions of the video
+ decoding process and video post-processing to the GPU video
+ hardware. Unfortunately, there is no such library for many graphic
+ chipsets. Some applications also support VA-API but many of them,
+ including Adobe Flash Player, don't.
+ .
+ This library proposes a generic VDPAU library. It uses OpenGL under
+ the hood to accelerate drawing and scaling and VA-API (if available)
+ to accelerate video decoding.
